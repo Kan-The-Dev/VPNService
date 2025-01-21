@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized VPN</title>
+</head>
+<body>
+    <h1>Decentralized VPN Service</h1>
+    <form action="/add-peer" method="POST">
+        <input type="text" name="peerIP" placeholder="Enter Peer IP" required>
+        <input type="text" name="privateKey" placeholder="Enter Private Key" required>
+        <button type="submit">Add Peer</button>
+    </form>
+
+    <h2>Get Peer IP</h2>
+    <form action="/get-peer" method="GET">
+        <input type="text" name="address" placeholder="Enter Address" required>
+        <button type="submit">Get Peer IP</button>
+    </form>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+</body>
+</html>
